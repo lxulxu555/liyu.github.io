@@ -1,0 +1,268 @@
+$btn-margin: 0;
+$btn-border-radius: 3px;
+$btn-font-weight: bold;
+$btn-font-size: 14px;
+$btn-height: 40px;
+$btn-padding: 0 24px 0 24px;
+$btn-line-height: $btn-height;
+
+$btn-primary-bg-color: #e71316;
+$btn-primary-color: #fff;
+$btn-primary-hover-color: #d01013;
+$btn-primary-border: solid 1px #e71316;
+$btn-primary-box-shadow: inset 0px 2px 5px 2px rgba(34, 34, 34, 0.2);
+
+$btn-secondary-color: #fff;
+$btn-secondary-bg-color: #555759;
+$btn-secondary-border: solid 1px #555759;
+$btn-secondary-hover-color: #222;
+$btn-secondary-hover-bg-color: $btn-secondary-hover-color;
+$btn-secondary-hover-border: 1px solid #222;
+$btn-secondary-active-box-shadow: inset 0px 2px 5px 2px rgba(34, 34, 34, 0.2);
+$btn-secondary-active-bg-color: rgb(34, 34, 34);
+
+$btn-outline-color: #1e8ae7;
+$btn-outline-bg-color: #fff;
+$btn-outline-border: solid 1px #dcdcdc;
+$btn-outline-hover-border: 1px solid #1e8ae7;
+$btn-outline-active-box-shadow: inset 0px 2px 5px 2px rgba(34, 34, 34, 0.2);
+
+$btn-info-color: rgb(84, 84, 92);
+$btn-info-bg-color: #fff;
+$btn-info-border: 1px solid rgb(85, 87, 89);
+$btn-info-hover-border: solid 1px #555759;
+$btn-info-active-box-shadow: inset 0px 2px 5px 2px rgba(34, 34, 34, 0.2);
+
+$btn-link-border: none;
+$btn-link-bg-color: transparent;
+$btn-link-color: #1e8ae7;
+$btn-link-hover-color: #005daa;
+$btn-link-active-color: #262262;
+$btn-link-disabled-color: #555759;
+
+$btn-disabled-color: #7f7f7f;
+$btn-disabled-bg-color: #dcdcdc;
+$btn-disabled-border: 1px solid #dcdcdc;
+
+$btn-white-color: #fff;
+$btn-white-bg-color: none;
+$btn-white-border: solid 1px #fff;
+$btn-white-hover-color: #000;
+$btn-white-hover-bg-color: #fff;
+$btn-white-active-box-shadow: inset 0px 2px 5px 2px #eee;
+
+$btn-mini-height: 30px;
+$btn-mini-padding: 0 16px 0 16px;
+
+$btn-small-height: 34px;
+$btn-small-padding: 0 16px 0 16px;
+
+$btn-large-height: 50px;
+$btn-large-padding: 0 24px 0 24px;
+
+.c-btn {
+  display: inline-block;
+  box-sizing: content-box;
+  height: $btn-height;
+  margin: $btn-margin;
+  padding: $btn-padding;
+  font-weight: $btn-font-weight;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  text-align: center;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+
+  &.c-btn--primary {
+    color: $btn-primary-color;
+    background-color: $btn-primary-bg-color;
+    border: $btn-primary-border;
+
+    &:hover {
+      background-color: $btn-primary-hover-color;
+      border: $btn-primary-border;
+    }
+
+    &:active,
+    &.active {
+      box-shadow: $btn-primary-box-shadow;
+    }
+  }
+
+  &.c-btn--secondary {
+    color: $btn-secondary-color;
+    background-color: $btn-secondary-bg-color;
+    border: $btn-secondary-border;
+
+    &:hover {
+      background-color: $btn-secondary-hover-bg-color;
+      border: $btn-secondary-hover-border;
+    }
+
+    &:active,
+    &.active {
+      background-color: $btn-secondary-active-bg-color;
+      box-shadow: $btn-secondary-active-box-shadow;
+    }
+  }
+
+  &.c-btn--outline {
+    color: $btn-outline-color;
+    background-color: $btn-outline-bg-color;
+    border: $btn-outline-border;
+
+    &:hover {
+      border: $btn-outline-hover-border;
+    }
+
+    &:active,
+    &.active {
+      box-shadow: $btn-outline-active-box-shadow;
+    }
+  }
+
+  /* Information */
+  &.c-btn--info {
+    color: $btn-info-color;
+    background-color: $btn-info-bg-color;
+    border: $btn-info-border;
+
+    &:hover {
+      border: $btn-info-hover-border;
+    }
+
+    &:active,
+    &.active {
+      box-shadow: $btn-info-active-box-shadow;
+    }
+  }
+
+  /* Link buttons */
+  &.c-btn--link {
+    align-items: center;
+    color: $btn-link-color;
+    background: $btn-link-bg-color;
+    border: $btn-link-border;
+
+    &:hover {
+      color: $btn-link-hover-color;
+
+      .c-link-icon {
+        color: $btn-link-hover-color;
+      }
+    }
+
+    &:active {
+      color: $btn-link-active-color;
+
+      .c-link-icon {
+        color: $btn-link-active-color;
+      }
+    }
+
+    &[disabled] {
+      color: $btn-link-disabled-color;
+      background-color: $btn-disabled-bg-color;
+      border: $btn-disabled-border;
+      cursor: not-allowed;
+
+      .c-link-icon {
+        color: $btn-link-disabled-color;
+      }
+
+      &:hover {
+        color: $btn-link-disabled-color;
+
+        .c-link-icon {
+          color: $btn-link-disabled-color !important;
+        }
+      }
+
+      &:active {
+        .c-link-icon {
+          color: $btn-link-disabled-color;
+        }
+      }
+    }
+
+    .c-link-icon {
+      margin-right: 8px;
+      color: $btn-link-color;
+      line-height: 24px;
+    }
+  }
+
+  /* Disabled */
+
+  &[disabled] {
+    color: $btn-disabled-color;
+    background-color: $btn-disabled-bg-color;
+    border: $btn-disabled-border;
+    cursor: not-allowed;
+
+    &:hover {
+      color: $btn-disabled-color;
+      background-color: $btn-disabled-bg-color;
+      border: $btn-disabled-border;
+      cursor: not-allowed;
+    }
+
+    &:active {
+      color: $btn-disabled-color;
+      background-color: $btn-disabled-bg-color;
+      border: $btn-disabled-border;
+      box-shadow: none;
+    }
+  }
+
+  /* White */
+  &.c-btn--white {
+    color: $btn-white-color;
+    background: $btn-white-bg-color;
+    border: $btn-white-border;
+
+    &:hover {
+      color: $btn-white-hover-color;
+      background-color: $btn-white-hover-bg-color;
+    }
+
+    &:active {
+      box-shadow: $btn-white-active-box-shadow;
+    }
+
+    &[disabled] {
+      color: $btn-disabled-color;
+      background-color: $btn-disabled-bg-color;
+      border: $btn-disabled-border;
+      cursor: not-allowed;
+
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+
+  /* Sizes */
+  &.c-btn--mini {
+    height: $btn-mini-height;
+    padding: $btn-mini-padding;
+    line-height: $btn-mini-height;
+  }
+
+  &.c-btn--small {
+    height: $btn-small-height;
+    padding: $btn-small-padding;
+    line-height: $btn-small-height;
+  }
+
+  &.c-btn--large {
+    height: $btn-large-height;
+    padding: $btn-large-padding;
+    line-height: $btn-large-height;
+  }
+
+  /* Block button */
+  &.c-btn--block {
+    width: 100%;
+  }
+}
